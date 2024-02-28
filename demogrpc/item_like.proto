@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package demo;
+
+option go_package = "demo/";
+
+message GetItemLikesReq {
+  repeated int32 ids = 1;
+}
+
+message ItemLikeResp {
+  map<int32, int32> result = 1;
+}
+
+service ItemLikeService {
+  rpc GetItemLikes(GetItemLikesReq) returns (ItemLikeResp);
+}

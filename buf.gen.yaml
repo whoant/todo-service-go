@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - plugin: go
+    out: ./demogrpc
+    opt: paths=import
+  - plugin: go-grpc
+    out: ./demogrpc
+    opt: paths=import,require_unimplemented_servers=false

@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  todo-service:
+    build:
+        context: .
+        dockerfile: deployments/docker/local.Dockerfile
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:/app
